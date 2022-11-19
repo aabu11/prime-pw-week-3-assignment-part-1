@@ -11,7 +11,7 @@ console.log('Animals are: ', animalArray);
 
 // 1.a. TODO: Make an array with some favorite foods
 
-    let favoriteFoods=['rice, lasagna,salmon, burgers']
+    let favoriteFoods=['rice', 'lasagna','salmon', 'burgers']
     console.log('Favorite foods are: ', favoriteFoods); 
 
 // 1.b. TODO: Log your array of foods to the console with a message, similar 
@@ -76,8 +76,8 @@ console.log('Favorite foods are: ', favoriteFoods);
 
 // 4.b. TODO: Remove the food at the end of your array & 
 //      log both the food removed and the updated array
-    let removedfavoriteFoods= favoriteFoods.pop(3)
-    console.log('Removed burgers', removedfavoriteFoods)
+    let removedfavoriteFoods= favoriteFoods.pop()
+    console.log('Removed Last Food', removedfavoriteFoods)
     console.log('Favorite Foods', favoriteFoods)
 
 // Example: Add an animal to the beginning using Array.unshift
@@ -98,18 +98,17 @@ console.log(`Added an animal to beginning: ${animalArray}`);
 // 4.d TODO: Remove the food at the beginning of your array & 
 //     log both the food removed and the updated array
  
-    removedfavoriteFoods=favoriteFoods.pop(0)
-    console.log('Removed Rice', favoriteFoods)
+    removedfavoriteFoods=favoriteFoods.shift()
+    console.log('Removed Tacos', removedfavoriteFoods)
+    console.log('The foods are now', favoriteFoods)
 
 
 // 4.e (STRETCH) TODO: Replace the second food in your array
 //      with another one of your favorite foods.
 //      Then log the updated array.
    
-    var index= favoriteFoods.indexOf('lasagna'); 
-    if (~index) { 
-        favoriteFoods[index]= 'steak'; 
-    } console.log('Removed lasagna', favoriteFoodsArray); 
+        favoriteFoods.splice(1,1, 'steak'); 
+     console.log(favoriteFoods); 
 
 // 4.f (STRETCH) TODO: Sort your favoriteFoods array
 //     in reverse alphabetical order. Log the array.
@@ -122,16 +121,17 @@ console.log(`Added an animal to beginning: ${animalArray}`);
 //     putting the word "and" between each item.
 //     eg "tacos and pizza and pasta". Log the string. 
          
-        favoriteFoods= ["Rice","steak","salmon", "burgers"]
+       
           let text= favoriteFoods.join(" and "); 
+          console.log(text) 
 
 // 4.h (STRETCH) TODO: Make a new array that combines 
 //     the favorite foods array with the animals array.
 //     Then log the new array.
 //     It should look something like:
 //     ['pizza', 'pasta', 'fish', 'cat', 'bird', 'dog']
+    
 
-    favoriteFoods=[]
-    animalArray=[]
+      
         combineArray=favoriteFoods.concat(animalArray); 
     console.log(combineArray); 
